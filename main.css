@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+    margin: 0; 
+    height: 85vh; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-size: 40px;
+    font-family: 'Times New Roman';
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images a {
+    margin: 0 7px; 
+    position: relative;
+}
+
+.images a::after {
+    content: attr(title); 
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    opacity: 0;
+    color: rgb(241, 236, 231);
+    font-size: 16px;
+    transition: opacity 0.2s ease;
+}
+
+.images a:hover::after {
+    opacity: 1; 
+}
+
+
+
